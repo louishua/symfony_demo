@@ -15,7 +15,6 @@ class RegisterController extends BaseController
     public function registerAction()
     {
         $response = parent::registerAction();
-
         // ... do custom stuff
         return $response;
     }
