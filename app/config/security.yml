@@ -23,6 +23,8 @@
             # form_login: ~
             # http://symfony.com/doc/current/cookbook/security/form_login_setup.html
 security:
+    acl:
+        connection: default
     encoders:
         FOS\UserBundle\Model\UserInterface: bcrypt
 

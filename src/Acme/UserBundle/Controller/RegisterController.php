@@ -13,7 +13,7 @@ use FOS\UserBundle\Controller\RegistrationController as BaseController;
 class RegisterController extends BaseController
 {
     public function registerAction()
-    {echo 2;exit;
+    {
         $response = parent::registerAction();
 
         // ... do custom stuff
