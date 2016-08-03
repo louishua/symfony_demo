@@ -1,0 +1,5 @@
+
+acme_web_dashBoard_index:
+    path: /index
+    defaults:
+        _controller: AcmeWebBundle:DashBoard:index

@@ -1,0 +1,14 @@
+
+acme_web_security_login:
+    path: /login
+    defaults:
+        _controller: AcmeWebBundle:Security:login
+
+
+acme_web_security_loginCheck:
+    path: /login_check
+    defaults:
+        _controller: AcmeWebBundle:Security:loginCheck
+
+
+
