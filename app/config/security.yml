@@ -44,7 +44,7 @@ security:
                         roles: 'ROLE_ADMIN'
         main:
             entity:
-                class: Acme\JbpUserBundle\Entity\Jbp9Admin #Acme\DemoBundle\Entity\User
+                class: Acme\UserBundle\Entity\Jbp9Admin #Acme\DemoBundle\Entity\User
                 property: username
 
     firewalls:
