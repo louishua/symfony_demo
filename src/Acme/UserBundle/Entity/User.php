@@ -11,9 +11,11 @@ use Symfony\Component\Security\Core\User\UserInterface;
 class User implements UserInterface
 {
     /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer")
      * @ORM\Id
-     * @ORM\Column(type="integer")
-     * @ORM\generatedValue(strategy="AUTO")
+     * @ORM\GeneratedValue(strategy="AUTO")
      */
     protected $id;
 
@@ -32,6 +34,13 @@ class User implements UserInterface
     protected $password;
 
     /**
+     * @var string
+     *
+     * @ORM\Column(name="roles", type="string", length=255)
+     */
+    protected $roles;
+
+    /**
      * @ORM\ManyToMany(targetEntity="Acme\UserBundle\Entity\Group")
      * @ORM\JoinTable(name="user_user_group",
      *      joinColumns={@ORM\JoinColumn(name="user_id", referencedColumnName="id")},
@@ -39,6 +48,11 @@ class User implements UserInterface
      * )
      */
     protected $groups;
+
+    public function getId()
+    {
+        return $this->id;
+    }
 
     /**
      * Returns the roles granted to the user.
