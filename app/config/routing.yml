@@ -1,5 +1,14 @@
+jbp_web_index:
+    path: /
+    defaults:
+        _controller:  FrameworkBundle:Redirect:urlRedirect
+        path: /web/dashboard/index
+        permanent: true
 
 acme_web:
     resource: "@AcmeWebBundle/Resources/config/routing.yml"
-    prefix: /
+    prefix: /web
 
+#acme_user:
+#    resource: "@AcmeUserBundle/Resources/config/routing.yml"
+#    prefix: /user

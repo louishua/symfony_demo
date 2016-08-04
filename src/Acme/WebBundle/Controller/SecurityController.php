@@ -31,4 +31,5 @@ class SecurityController extends Controller
     public function loginCheckAction()
     {
     }
+
 }

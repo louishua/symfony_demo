@@ -1,0 +1,11 @@
+
+acme_web_user_index:
+    path: /index
+    defaults:
+        _controller: AcmeUserBundle:User:index
+
+
+acme_web_user_create:
+    path: /create
+    defaults:
+        _controller: AcmeUserBundle:User:create
