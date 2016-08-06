@@ -62,10 +62,11 @@ security:
             form_login:
                 check_path: acme_web_security_loginCheck
                 login_path: acme_web_security_login
+                default_target_path: acme_web_dashboard_index
             logout:
                 path:   acme_web_security_logout
                 target: acme_web_security_login
 
     access_control:
-#        - { path: ^/login, roles: IS_AUTHENTICATED_ANONYMOUSLY }
-#        - { path: ^/backend/*, roles: ROLE_ADMIN }
+        - { path: ^/web/post/index, roles: ROLE_USER }
+        - { path: ^/backend/*, roles: ROLE_ADMIN }

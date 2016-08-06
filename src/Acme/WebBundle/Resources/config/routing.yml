@@ -3,6 +3,10 @@ acme_web_security:
     resource: "@AcmeWebBundle/Resources/config/routing/security.yml"
     prefix: /security
 
-acme_web_dashBoard:
-    resource: "@AcmeWebBundle/Resources/config/routing/dash_board.yml"
+acme_web_dashboard:
+    resource: "@AcmeWebBundle/Resources/config/routing/dashboard.yml"
     prefix: /dashboard
+
+acme_web_post:
+    resource: "@AcmeWebBundle/Resources/config/routing/post.yml"
+    prefix: /post

@@ -7,3 +7,12 @@ services:
 #    service_name:
 #        class: AppBundle\Directory\ClassName
 #        arguments: ["@another_service_name", "plain_value", "%parameter_name%"]
+
+
+
+    web.post_voter:
+        class: Acme\WebBundle\Security\PostVoter
+        tags:
+            - { name: security.voter }
+        # small performance boost
+        public: false
