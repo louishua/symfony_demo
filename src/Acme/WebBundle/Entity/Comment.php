@@ -5,9 +5,9 @@ namespace Acme\WebBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 /**
  * @ORM\Entity
- * @ORM\Table(name="post")
+ * @ORM\Table(name="comment")
  */
-class Post
+class Comment
 {
     /**
      * @var integer
@@ -41,14 +41,6 @@ class Post
         return $this;
     }
 
-//    public function isPrivate()
-//    {
-//
-//    }
-//
-//    public function getOwner()
-//    {
-//
-//    }
+
 
 }

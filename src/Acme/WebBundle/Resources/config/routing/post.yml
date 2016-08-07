@@ -3,3 +3,13 @@ acme_web_post_index:
     path: /index
     defaults:
         _controller: AcmeWebBundle:Post:index
+
+acme_web_post_create:
+    path: /create
+    defaults:
+        _controller: AcmeWebBundle:Post:create
+
+acme_web_post_edit:
+    path: /edit/{comment}
+    defaults:
+        _controller: AcmeWebBundle:Post:edit
