@@ -2,7 +2,7 @@ html,body{
     height: 100%;
 }
 
-body{background: url('../img/loginBack.jpg')}
+body{background: url('../Resources/public/img/loginBack.jpg')}
 
 .vertical-center {
     height:100%;

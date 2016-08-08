@@ -3,22 +3,11 @@
 {% block stylesheets %}
     {{ parent() }}
     {% stylesheets
-    '@AcmeWebBundle/Resources/public/css/login.css'
-    '@AcmeWebBundle/Resources/public/css/common.css'
-    output='bundles/AcmeWeb/css/*'
-    filter='cssrewrite' %}
+    'bundles/web/css/*'
+
+     %}
     <link rel="stylesheet" href="{{ asset_url }}" />
     {% endstylesheets %}
-
-    <style>
-        html,body{
-            height: 100%;
-        }
-        .login-wrap{
-            
-        }
-
-    </style>
 
 {% endblock %}
 
@@ -26,7 +15,7 @@
     {{ parent() }}
     {% javascripts
     '@AcmeWebBundle/Resources/public/js/*'
-    output='bundles/AcmeWeb/js/main.js'
+    output='bundles/acmeweb/js/main.js'
     %}
     <script src="{{ asset_url }}"></script>
     {% endjavascripts %}
@@ -34,11 +23,9 @@
 {% endblock %}
 
 {% block body %}
-    <div class="login-wrap container">
-        <div class="row">
-            <h2 class="text-center text-primary">系统后台登录</h2>
-
-            <div class="col-md-4 center-block" style="float: none">
+<div class="vertical-center">
+    <div class="centered">
+                <h2 class="text-center text-primary">系统后台登录</h2>
                 <form class="form col-md-12 center-block" action="{{ path('acme_web_security_loginCheck') }}" method="post">
                 <div class="form-group">
                     <input type="text" class="form-control" id="username" name="_username" placeholder="用户名" value="" />
@@ -54,7 +41,7 @@
                 </div>
                     <button class="btn btn-lg btn-primary btn-block" type="submit">登录</button>
                 </form>
-            </div>
-        </div>
+
     </div>
+</div>
 {% endblock %}
