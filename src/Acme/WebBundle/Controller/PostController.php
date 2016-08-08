@@ -20,8 +20,8 @@ class PostController extends Controller
 {
     public function indexAction()
     {
-        $post = new Post();
-        $this->denyAccessUnlessGranted('view', $post);
+
+        $this->denyAccessUnlessGranted('view', $this);
 
         return $this->render('AcmeWebBundle:Post:index.html.twig');
     }
