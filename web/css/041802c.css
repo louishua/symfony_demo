@@ -1,0 +1,30 @@
+html,body{
+    height: 100%;
+}
+
+body{background: url('../Resources/public/img/loginBack.jpg')}
+
+.vertical-center {
+    height:100%;
+    text-align: center;  /* align the inline(-block) elements horizontally */
+}
+
+.vertical-center:before {    /* create a full-height inline block pseudo=element */
+    content: '';
+    display: inline-block;
+    vertical-align: middle;  /* vertical alignment of the inline element */
+    height: 100%;
+    margin-right: -0.25em; /* Adjusts for spacing */
+}
+
+.vertical-center > .centered  {
+    display: inline-block;
+    vertical-align: middle;
+    width: 30%;
+    background: #999999;
+    border-radius: 10px;
+    text-align: left;
+    padding: 5px 0px;
+}
+
+form{padding: 10px;}
