@@ -36,12 +36,12 @@ security:
         ROLE_SUPER_ADMIN: [ROLE_USER, ROLE_ADMIN, ROLE_ALLOWED_TO_SWITCH]
 
     providers:
-#        in_memory:
-#            memory:
-#                users:
-#                    louis:
-#                        password: louis
-#                        roles: 'ROLE_ADMIN'
+        in_memory:
+            memory:
+                users:
+                    louis:
+                        password: louis
+                        roles: ['ROLE_SUPER_ADMIN','ROLE_USER']
         main:
             entity:
                 class: Acme\UserBundle\Entity\User #Acme\DemoBundle\Entity\User
@@ -50,7 +50,7 @@ security:
     firewalls:
         # disables authentication for assets and the profiler, adapt it according to your needs
         dev:
-            pattern: ^/(_(profiler|wdt)|bundles|css|images|js)/
+            pattern: ^/(_(profiler|wdt)|resources)/
             security: false
 
         login:
@@ -63,10 +63,15 @@ security:
                 check_path: acme_web_security_loginCheck
                 login_path: acme_web_security_login
                 default_target_path: acme_web_dashboard_index
+            remember_me:
+                name: _remember_me
+                secret:   '%secret%'
+                lifetime: 604800 # 1 week in seconds
+                path:     /
             logout:
                 path:   acme_web_security_logout
                 target: acme_web_security_login
 
     access_control:
-        - { path: ^/web/post/index, roles: ROLE_USER }
+        - { path: ^/web/post/index, roles: ROLE_ADMIN }
         - { path: ^/backend/*, roles: ROLE_ADMIN }

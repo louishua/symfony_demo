@@ -20,9 +20,9 @@ class PostController extends Controller
 {
     public function indexAction()
     {
+        $translated = $this->get('translator')->trans('Invalid credentials.');
 
-        $this->denyAccessUnlessGranted('view', $this);
-
+        return new Response($translated);
         return $this->render('AcmeWebBundle:Post:index.html.twig');
     }
 
