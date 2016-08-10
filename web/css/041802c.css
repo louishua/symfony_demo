@@ -3,7 +3,7 @@ html,body{
 }
 
 body{
-    background: url('../images/loginBack.jpg');
+    background: url('../Resources/public/images/loginBack.jpg');
     background-size: 100% 100%;}
 
 .vertical-center {
