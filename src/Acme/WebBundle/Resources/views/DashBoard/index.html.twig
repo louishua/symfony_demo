@@ -1,11 +1,46 @@
 {% extends 'AcmeWebBundle::layout.html.twig' %}
+{% block stylesheets %}
+    {{ parent() }}
+    {% stylesheets output="resources/css/acme_web_dashboard.css"
+    "bundles/acmeweb/css/dashboard.css"
+    filter="cssrewrite"
+    %}
+    <link rel="stylesheet" href="{{ asset_url }}" />
+    {% endstylesheets %}
+
+{% endblock %}
 
 {% block body %}
-    <div class="navbar navbar-default">
-        <div class="container">
-            ttttttttttt
+    <div class="navbar admin-nav-container">
+        <div class="admin-nav-inner-container">
+            <div class="container-fluid">
+                <a href="#" class="navbar-brand admin-brand">
+                        <span>
+                        <img src="http://demo.thinkcmf.com/admin/themes/simplebootx/Public/assets/images/logo-18.png">
+                            系统管理后台
+                        </span>
+                </a>
+                <div></div>
+                <div class="dropdown pull-right">
+                    <button class="btn btn-success dropdown-toggle"  type="button"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Dropup
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                        <li><a href="#">Action</a></li>
+                        <li><a href="#">Another action</a></li>
+                        <li><a href="#">Something else here</a></li>
+                        <li><a href="#">Separated link</a></li>
+                    </ul>
+                </div>
+
+            </div>
         </div>
+
+
+    <div class="container-fluid admin-main-container">
+        <div class="admin-sidebar">s</div>
+        <div class="admin-main-content">content</div>
     </div>
-    <div class="main-container container-fluid"></div>
 {% endblock %}
 
