@@ -2,7 +2,7 @@ html,body{
     height: 100%;
 }
 
-body{background: url('../images/loginBack.jpg')}
+body{background: url('../img/loginBack.jpg')}
 
 .vertical-center {
     height:100%;
@@ -20,12 +20,11 @@ body{background: url('../images/loginBack.jpg')}
 .vertical-center > .centered  {
     display: inline-block;
     vertical-align: middle;
-    margin-top: -150px;
     width: 30%;
-    background: rgba(255, 255, 255, 0.9);
+    background: #999999;
     border-radius: 10px;
     text-align: left;
-    padding: 15px 0px;
+    padding: 5px 0px;
 }
 
 form{padding: 10px;}

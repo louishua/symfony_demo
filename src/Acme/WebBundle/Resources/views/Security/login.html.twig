@@ -2,9 +2,9 @@
 
 {% block stylesheets %}
     {{ parent() }}
-    {% stylesheets output="resources/css/acme_web_login.css"
-    "bundles/acmeweb/css/login.css"
-    filter="cssrewrite"
+    {% stylesheets
+    'bundles/web/css/*'
+
      %}
     <link rel="stylesheet" href="{{ asset_url }}" />
     {% endstylesheets %}
@@ -14,8 +14,8 @@
 {% block javascripts %}
     {{ parent() }}
     {% javascripts
-    output='resources/js/acme_web_login.js'
-    'bundles/acmeweb/js/login.js'
+    '@AcmeWebBundle/Resources/public/js/*'
+    output='bundles/acmeweb/js/main.js'
     %}
     <script src="{{ asset_url }}"></script>
     {% endjavascripts %}
@@ -37,7 +37,7 @@
                     <div class="form-group text-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
                 {% endif %}
                 <div class="checkbox">
-                    <label for="remember_me"><input type="checkbox" id="remember_me" name="_remember_me" checked>记住我</label>
+                    <label><input type="checkbox" value="remember-me">记住我</label>
                 </div>
                     <button class="btn btn-lg btn-primary btn-block" type="submit">登录</button>
                 </form>
